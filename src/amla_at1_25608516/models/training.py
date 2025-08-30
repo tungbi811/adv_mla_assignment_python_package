@@ -16,7 +16,6 @@ from sklearn.metrics import (
     confusion_matrix,
 )
 
-
 def _fit_and_score(model, params, X_train, y_train, X_val, y_val, scorer):
     """Worker: clone, fit, score. Returns (params, score)."""
     m = clone(model).set_params(**params)
@@ -215,3 +214,4 @@ def evaluate_on_validation(
     print(classification_report(y_val, y_pred, target_names=target_names, zero_division=zero_division))
 
     print("Confusion Matrix:\n", confusion_matrix(y_val, y_pred))
+

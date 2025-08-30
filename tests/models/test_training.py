@@ -1,4 +1,5 @@
 import pytest
+import numpy as np
 import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.linear_model import LogisticRegression
@@ -65,7 +66,7 @@ def test_random_search_with_distributions(iris_data):
         "solver": ["liblinear"]
     }
     results = random_search(model, param_distributions, X.iloc[:100], y.iloc[:100],
-                            X.iloc[100:], y.iloc[100:], n_iter=3, seed=123)
+                            X.iloc[100:], y.iloc[100:], n_iter=3)
     assert len(results) == 3
     assert all("params" in r and "score" in r for r in results)
 @pytest.fixture

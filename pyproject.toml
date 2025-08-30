@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "amla_at1_25608516"
-version = "7"
+version = "9"
 description = "assignment 1 python package"
 authors = ["duy tung nguyen"]
 license = "MIT"
