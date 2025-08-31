@@ -47,11 +47,12 @@ def evaluate_model(model, X_val, y_val, labels=["Not Drafted", "Drafted"]):
     report = classification_report(y_val, y_val_pred)
 
     # Print results
-    print("Validation Set Evaluation:")
+    print("==== Evaluation Results ====")
     print(f"Accuracy:  {accuracy:.4f}")
     print(f"Precision: {precision:.4f}")
     print(f"Recall:    {recall:.4f}")
     print(f"F1 Score:  {f1:.4f}")
+    print(f"ROC-AUC Score: {roc_auc:.4f}")
     print("\nClassification Report:\n", report)
 
     # Confusion matrix
