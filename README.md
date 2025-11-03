@@ -5,7 +5,7 @@ assignment 1 python package
 ## Installation
 
 ```bash
-$ pip install amla_at1_25608516
+$ pip install -i https://test.pypi.org/simple/ amla_at1_25608516==15
 ```
 
 ## Usage
